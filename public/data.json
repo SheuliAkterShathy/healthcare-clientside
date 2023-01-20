@@ -1,0 +1,21 @@
+[
+    {
+      "price": 100,
+      "dr_name": "Dr.Awal Hossain",
+      "treatment_name": "Eye care solution",
+      "time":"10:00 Am-10:30Am"
+    },
+    {
+      "price": 90,
+      "dr_name": "Dr.Taskin Chaula",
+      "treatment_name": "Neurology",
+      "time":"10:00 Am-10:30Am"
+    },
+    {
+      "price": 80,
+      "dr_name": "Dr. Zowa Islam",
+      "treatment_name": "Orthopaedics",
+      "time":"10:00 Am-10:30Am"
+    }
+   
+  ]
