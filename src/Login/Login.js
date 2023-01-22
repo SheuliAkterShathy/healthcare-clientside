@@ -46,8 +46,13 @@ const Login = () => {
 
 
     return (
-        <div className="flex flex-col max-w-md mx-auto my-10 p-6 rounded-md sm:p-10 bg-sky-100">
+        <div className="flex flex-col max-w-md mx-auto my-10 p-6 rounded-md sm:p-10 bg-sky-50">
+          <div className='font-bold text-blue-600'>
+            <h3>Admin Email: tarek@gmail.com</h3>
+            <h4>Password: 123456</h4>
+            </div>
         <div className="mb-8 text-center">
+           
           <h1 className="my-3 text-4xl font-bold">Log in</h1>
         </div>
         <form

@@ -23,7 +23,7 @@ const BookingModal = ({ treatment, selectedDate,setTreatment,refetch }) => {
         const booking = {
             drname,
             appointmentDate: date,
-            treatment: treatment_name,
+            // treatment: treatment_name,
             patientname,
             slot,
             email,
@@ -31,7 +31,7 @@ const BookingModal = ({ treatment, selectedDate,setTreatment,refetch }) => {
             message
         }
     console.log(booking)
-        fetch('http://localhost:5000/bookings',{
+        fetch('https://healthcare-server-zeta.vercel.app/bookings',{
           method:'POST',
           headers: {
             'content-type': 'application/json'

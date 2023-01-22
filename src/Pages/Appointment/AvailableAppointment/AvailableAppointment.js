@@ -14,7 +14,7 @@ const AvailableAppointment = ({selectedDate}) => {
    const {data: appointmentOptions = [],refetch, isLoading} = useQuery({
     queryKey:['AppointmentOptions', date],
     queryFn: async() => {
-      const res = await fetch(`http://localhost:5000/appointmentOptions`);
+      const res = await fetch(`https://healthcare-server-zeta.vercel.app/appointmentOptions`);
       const data = await res.json();
       return data
     }

@@ -1,12 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
 import Loading from "../../Shared/Loading/Loading";
 
 const MyBookings = () => {
   const { user } = useContext(AuthContext);
 
-  const url = `http://localhost:5000/bookings?email=${user?.email}`;
+  const url = `https://healthcare-server-zeta.vercel.app/bookings?email=${user?.email}`;
 
   const { data: bookings = [], isLoading } = useQuery({
     queryKey: ["bookings", user?.email],
@@ -33,9 +34,9 @@ const MyBookings = () => {
             <tr>
               <th></th>
               <th>Dr_Name</th>
-              <th>Treatment</th>
               <th>Date</th>
-              <th>Time</th>
+              <th>Phone</th>
+              <th>Message</th>
               <th>Edit</th>
             </tr>
           </thead>
@@ -45,10 +46,10 @@ const MyBookings = () => {
                 <tr key={booking._id}>
                   <th>{i + 1}</th>
                   <td>{booking?.drname}</td>
-                  <td>{booking?.treatment}</td>
                   <td>{booking?.appointmentDate}</td>
-                  <td>{booking?.slot}</td>
-                  <td>Edit</td>
+                  <td>{booking?.phone}</td>
+                  <td>{booking?.message}</td>
+                  <Link to={`/dashboard/updatedBooking/${booking?._id}`}><td className="text-blue-600 cursor-pointer hover:underline ">Edit</td></Link>
                 </tr>
               ))}
           </tbody>

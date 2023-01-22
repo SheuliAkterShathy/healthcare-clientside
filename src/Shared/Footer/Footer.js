@@ -6,7 +6,7 @@ const Footer = () => {
     <footer style={{
         background: `url('https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=1060&t=st=1674165678~exp=1674166278~hmac=764ad785a2352c2b0efaf53195f370271e69124dea5d7e18dded2dba02219bc8')`,
         backgroundSize:'cover'
-    }}  className="p-10">
+    }}  className="p-10 mt-12">
       <div className="footer">
         <div>
           <span className="footer-title">Services</span>

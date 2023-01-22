@@ -10,7 +10,7 @@ const AppontmentBanner = ({selectedDate,setSelectedDate}) => {
         <div className="hero min-h-screen">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img
-              src='https://img.freepik.com/premium-photo/doctor-research-analysis-diagnose-checking-brain-testing-result-patient-medical-technology_34200-493.jpg?w=1380'
+              src='https://img.freepik.com/premium-photo/doctor-blue-medical-clothes-mask-is-looking-screen-with-health-parameters-it-medical-chamber-first-aid-reanimation_116317-22154.jpg?w=1380'
               className="lg:w-1/2 rounded-lg shadow-2xl" alt=""
             />
             <div className="shadow-md p-10 lg:mr-8">

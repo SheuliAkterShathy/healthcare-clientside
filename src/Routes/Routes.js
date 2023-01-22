@@ -7,6 +7,9 @@ import AllPatients from "../Pages/AllPatients/AllPatients";
 import Appointment from "../Pages/Appointment/Appointment/Appointment";
 import Home from "../Pages/Home/Home";
 import MyBookings from "../Pages/MyBookings/MyBookings";
+import UpdateBooking from "../Pages/UpdateBooking/UpdateBooking";
+import Contact from "../Shared/Contact/Contact";
+import ErrorPage from "../Shared/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -15,11 +18,15 @@ const router = createBrowserRouter([
     {
         path: "/",
          element: <Main></Main>,
-        // errorElement:<DisplayError></DisplayError>,
+         errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',
                  element:<Home></Home>
+            },
+            {
+                path:'/contactUs',
+                 element:<Contact></Contact>
             },
             {
                 path:'/appointment',
@@ -41,7 +48,7 @@ const router = createBrowserRouter([
         {
             path:'/dashboard',
             element:<DashboardLayout></DashboardLayout>,
-            // errorElement:<DisplayError></DisplayError>,
+            errorElement:<ErrorPage></ErrorPage>,
             children:[
                 {
                     path:'dashboard/mybookings',
@@ -55,8 +62,13 @@ const router = createBrowserRouter([
                     path:'/dashboard/alldoctors',
                     element:<AllDoctors></AllDoctors>
                 },
-             
-              
+                {
+                    path:'/dashboard/updatedBooking/:id',
+                    element:<UpdateBooking></UpdateBooking>,
+                    loader: ({ params }) =>
+                    fetch(
+                      `https://healthcare-server-zeta.vercel.app/dashboard/updatedBooking/${params.id}`)
+                }
             ]
           }
 ])
